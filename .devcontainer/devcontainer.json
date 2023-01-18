@@ -1,0 +1,27 @@
+{
+  "name": "${containerWorkspaceFolderBasename}",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "WORKSPACE_NAME": "${containerWorkspaceFolderBasename}"
+    }
+  },
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "typescript.preferences.jsxAttributeCompletionStyle": "none"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Fooxly.themeswitch",
+        "albert.TabOut",
+        "eamodio.gitlens",
+        "richie5um2.vscode-sort-json",
+        "dbaeumer.vscode-eslint",
+        "formulahendry.auto-rename-tag",
+        "esbenp.prettier-vscode",
+        "SimonSiefke.svg-preview"
+      ]
+    }
+  }
+}
