@@ -20,6 +20,11 @@ export const Layout: LayoutType = ({
 }) => (
   <>
     <Head>
+      {/* google search console */}
+      <meta
+        name="google-site-verification"
+        content="GrhtaVjtxOnHy7GOH6RyBrO7VSlWb3kr3Tf2v83TxmM"
+      />
       {/* Primary Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
