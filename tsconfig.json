@@ -24,7 +24,8 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/lib/*": ["lib/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      "@/animations/*": ["animations/*"]
     },
     // Emit
     "importsNotUsedAsValues": "error",

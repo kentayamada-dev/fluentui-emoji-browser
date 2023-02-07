@@ -18,6 +18,7 @@ specifiers:
   emoji-js: ^3.7.0
   eslint: ^8.33.0
   eslint-config-next: ^13.1.6
+  lottie-react: ^2.3.1
   next: 13.1.1
   next-query-params: ^4.1.0
   next-sitemap: ^3.1.49
@@ -45,6 +46,7 @@ dependencies:
   '@types/react-infinite-scroller': 1.2.3
   embla-carousel-react: 7.0.9_react@18.2.0
   emoji-js: 3.7.0
+  lottie-react: 2.3.1_biqbaboplfbrettd7655fr4n2y
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   next-query-params: 4.1.0_ntivn4suwvjp473kkfy3tj6sri
   react: 18.2.0
@@ -2291,6 +2293,21 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+
+  /lottie-react/2.3.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-8cxd6XZZtECT6LoAhCftRdYrEpHxiouvB5EPiYA+TtCG5LHNYAdMS9IVIHcxKtWnpo7x16QfCLj1XLXZpaN81A==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      lottie-web: 5.10.2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /lottie-web/5.10.2:
+    resolution: {integrity: sha512-d0PFIGiwuMsJYaF4uPo+qG8dEorlI+xFI2zrrFtE1bGO4WoLIz+NjremxEq1swpR7juR10aeOtmNh3d6G3ub0A==}
+    dev: false
 
   /lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}

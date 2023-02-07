@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import { Sidebar } from "../sidebar";
 import { useTheme } from "@/lib/mantine/useTheme";
 import { SearchField } from "./searchField";
+import NextLink from "next/link";
 
 const COMMON_HEIGHT = "36px";
 
@@ -53,19 +54,21 @@ export const Header: HeaderType = ({
                 onClick={() => setIsBurgerOpened((state) => !state)}
               />
             )}
-            <Box pos="relative" w="250px" h={COMMON_HEIGHT}>
-              <NextImage
-                alt="Fluent Emoji Browser"
-                src="/logo.svg"
-                fill
-                sizes="300px"
-                priority
-                quality={100}
-                style={{
-                  objectFit: "contain",
-                }}
-              />
-            </Box>
+            <NextLink href="/">
+              <Box pos="relative" w="250px" h={COMMON_HEIGHT}>
+                <NextImage
+                  alt="Fluent Emoji Browser"
+                  src="/logo.svg"
+                  fill
+                  sizes="300px"
+                  priority
+                  quality={100}
+                  style={{
+                    objectFit: "contain",
+                  }}
+                />
+              </Box>
+            </NextLink>
           </Flex>
           <Group>
             {isLargerThanSM && (
