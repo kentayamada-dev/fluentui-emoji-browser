@@ -8,6 +8,8 @@ import { useLocalStorage } from "@mantine/hooks";
 import type { AppProps } from "next/app";
 import { NextAdapter } from "next-query-params";
 import { QueryParamProvider } from "use-query-params";
+import Script from "next/script";
+import { GA_TRACKING_ID } from "@/lib/gtag/constants";
 
 export const MyApp = ({ Component, pageProps }: AppProps) => {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -20,6 +22,18 @@ export const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
+      <Script
+        id="load-ga"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+      />
+      <Script id="load-ga-script">
+        {`
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+             gtag('config', '${GA_TRACKING_ID}');
+          `}
+      </Script>
       <QueryParamProvider
         adapter={NextAdapter}
         options={{
