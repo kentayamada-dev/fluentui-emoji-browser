@@ -9,7 +9,7 @@ import type { AppProps } from "next/app";
 import { NextAdapter } from "next-query-params";
 import { QueryParamProvider } from "use-query-params";
 import Script from "next/script";
-import { GA_TRACKING_ID } from "@/lib/gtag/constants";
+import { GA_TRACKING_ID } from "@/lib/ga/constants";
 
 export const MyApp = ({ Component, pageProps }: AppProps) => {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
