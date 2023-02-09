@@ -36,7 +36,7 @@ export const Layout: LayoutType = ({
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content="https://fluentui-emoji-browser.com/assets/meta.png"
+        content="https://fluentui-emoji-browser.com/meta.png"
       />
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -48,7 +48,7 @@ export const Layout: LayoutType = ({
       <meta property="twitter:description" content={description} />
       <meta
         property="twitter:image"
-        content="https://fluentui-emoji-browser.com/assets/meta.png"
+        content="https://fluentui-emoji-browser.com/meta.png"
       />
     </Head>
     <Box pos="sticky" top="0" h={HEADER_HEIGHT} sx={{ zIndex: 999 }}>
