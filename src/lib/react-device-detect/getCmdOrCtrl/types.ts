@@ -1,1 +1,1 @@
-export type GetCmdOrCtrlType = () => "Ctrl" | "⌘" | null;
+export type GetCmdOrCtrlType = () => "Ctrl" | "⌃" | null;
