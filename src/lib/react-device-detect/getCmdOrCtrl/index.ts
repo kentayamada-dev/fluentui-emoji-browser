@@ -7,7 +7,7 @@ export const getCmdOrCtrl: GetCmdOrCtrlType = () => {
       return "Ctrl";
     }
     if (isMacOs) {
-      return "⌘";
+      return "⌃";
     }
   }
   return null;
