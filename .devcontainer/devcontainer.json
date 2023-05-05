@@ -6,12 +6,12 @@
       "WORKSPACE_NAME": "${containerWorkspaceFolderBasename}"
     }
   },
-  "settings": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "typescript.preferences.jsxAttributeCompletionStyle": "none"
-  },
   "customizations": {
     "vscode": {
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "typescript.preferences.jsxAttributeCompletionStyle": "none"
+      },
       "extensions": [
         "Fooxly.themeswitch",
         "albert.TabOut",
