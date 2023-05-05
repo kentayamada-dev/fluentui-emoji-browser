@@ -1,9 +1,9 @@
 FROM node:18.12.1-bullseye-slim
 
-ENV TZ="Asia/Tokyo"
-ENV SHELL=/bin/zsh
+ENV TZ=Asia/Tokyo \
+    SHELL=/bin/zsh
 
-ARG USERNAME=vscode
+ARG USERNAME=dev
 ARG USER_UID=1001
 ARG USER_GID=$USER_UID
 ARG WORKSPACE_NAME
@@ -16,7 +16,6 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && npm install --global pnpm
 
 USER $USERNAME
-SHELL ["/bin/zsh", "-c"]
 RUN ln -s /workspaces/$WORKSPACE_NAME/.devcontainer/.zshrc ~/.zshrc \
     && git clone --depth 1 -- https://github.com/z-shell/F-Sy-H ~/fsh \
     && git clone --depth 1 -- https://github.com/olets/zsh-abbr ~/abbr
