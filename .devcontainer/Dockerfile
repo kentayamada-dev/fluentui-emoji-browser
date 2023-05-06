@@ -15,8 +15,8 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME \
     && npm install --global pnpm
 
+USER $USERNAME
+
 RUN ln -s /workspaces/$WORKSPACE_NAME/.devcontainer/.zshrc ~/.zshrc \
     && git clone --depth 1 -- https://github.com/z-shell/F-Sy-H ~/fsh \
     && git clone --depth 1 -- https://github.com/olets/zsh-abbr ~/abbr
-
-USER $USERNAME
