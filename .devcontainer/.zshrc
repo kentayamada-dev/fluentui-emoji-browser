@@ -53,8 +53,7 @@ alias rm='rm -i'
 FZF_DEFAULT_COMMAND='fdfind --type f --max-depth=1 --hidden'
 
 preview-file() {
-  BUFFER=$(eval "$FZF_DEFAULT_COMMAND" | fzf --padding=1 --preview-window noborder --preview "batcat --color=always --style=numbers,changes {}" --preview-window=80% --color 'info:#5777c6,preview-bg:#1f2227,pointer:#32CD32,prompt:#32CD32,fg+:#32CD32,bg+:-1,gutter:-1' --exact --reverse --query="$LBUFFER" --prompt="🔎 " --info=hidden)
-  CURSOR=${#BUFFER}
+  BUFFER=$(eval "$FZF_DEFAULT_COMMAND" | fzf --padding=1 --preview-window noborder --preview "batcat --color=always --style=numbers {}" --preview-window=80% --color 'info:#5777c6,preview-bg:#1f2227,pointer:#32CD32,prompt:#32CD32,fg+:#32CD32,bg+:-1,gutter:-1' --exact --reverse --query="$LBUFFER" --prompt="🔎 " --info=hidden) CURSOR=${#BUFFER}
 }
 
 zle -N preview-file
