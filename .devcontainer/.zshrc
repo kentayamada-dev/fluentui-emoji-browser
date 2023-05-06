@@ -26,7 +26,7 @@ zshaddhistory() {
 }
 
 select-history() {
-  BUFFER=$(history -n -r 1 | fzf --color 'pointer:#32CD32,prompt:#32CD32,fg+:#32CD32,bg+:-1,gutter:-1' --exact --reverse --query="$LBUFFER" --prompt="🔎 " --info=hidden)
+  BUFFER=$(history -n -r 1 | fzf --padding=1 --color 'pointer:#32CD32,prompt:#32CD32,fg+:#32CD32,bg+:-1,gutter:-1' --exact --reverse --query="$LBUFFER" --prompt="🔎 " --info=hidden)
   CURSOR=${#BUFFER}
 }
 
@@ -53,7 +53,7 @@ alias rm='rm -i'
 FZF_DEFAULT_COMMAND='fdfind --type f --max-depth=1 --hidden'
 
 preview-file() {
-  BUFFER=$(eval "$FZF_DEFAULT_COMMAND" | fzf --preview "batcat --color=always --style=header,grid {}" --preview-window=80% --color 'pointer:#32CD32,prompt:#32CD32,fg+:#32CD32,bg+:-1,gutter:-1' --exact --reverse --query="$LBUFFER" --prompt="🔎 " --info=hidden)
+  BUFFER=$(eval "$FZF_DEFAULT_COMMAND" | fzf --padding=1 --preview "batcat --color=always --style=header,grid {}" --preview-window=80% --color 'info:#5777c6,preview-bg:#1f2227,pointer:#32CD32,prompt:#32CD32,fg+:#32CD32,bg+:-1,gutter:-1' --exact --reverse --query="$LBUFFER" --prompt="🔎 " --info=hidden)
   CURSOR=${#BUFFER}
 }
 
